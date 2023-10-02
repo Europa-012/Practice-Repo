@@ -1,0 +1,169 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta viewport="width=device-width" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Please answer this survey. We appreciate your feedback.</p>
+      <form id="survey-form">
+        <fieldset>
+          <!-- <legend>Personal Information</legend> -->
+          <label id="name-label" for="name">Name: <input id="name" type="text" placeholder="Enter here..." required></label>
+          <label id="email-label" for="email">Email: <input id="email" type="email" placeholder="Enter here..." required></label>
+          <label id="number-label" for="number">Age: <input id="number" type="number" min="13" max="120" placeholder="Enter here..."></label>
+        </fieldset>
+        <fieldset>
+          <label id="preferred-development-environment-label" for="dropdown">What is your favorite development environment?
+            <select id="dropdown" name="preferred-development-environment">
+              <option value="">Select one</option>
+              <option value="visual-studio-code">Visual Studio Code</option>
+              <option value="sublime-text">Sublime Text</option>
+              <option value="atom">Atom</option>
+              <option value="eclipse">Eclipse</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          </fieldset>
+          <fieldset>
+          <label id="skill-rating-label" for="skill-rating">How would you rate your coding skills?
+            <label for="beginner"><input type="radio" id="beginner" name="skill-rating" value="beginner">Beginner</label>
+            <label for="intermediate"><input type="radio" id="intermediate" name="skill-rating" value="intermediate">Intermediate</label>
+            <label for="advanced"><input type="radio" id="advanced" name="skill-rating" value="advanced">Advanced</label>
+          </label>
+        </fieldset>
+        <fieldset>
+          
+          <label for="preferred-language" name="preferred-language-label">Which programming languages do you use regularly? (Select all that apply)
+            <label for="javascript"><input type="checkbox" id="javascript" name="javascript" value="javascript">Javascript</label>
+            <label for="python"><input type="checkbox" id="python" name="python" value="python">Python</label>
+            <label for="java"><input type="checkbox" id="java" name="java" value="java">Java</label>
+            <label for="c++"><input type="checkbox" id="c++" name="c++" value="c++">C++</label>
+            <label for="ruby"><input type="checkbox" id="ruby" name="ruby" value="ruby">Ruby</label>
+            <label for="other"><input type="checkbox" id="other" name="other" value="other">Other</label>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label for="explanation">Explain how you came to the decision to try programming/coding?<textarea placeholder="Type here..." id="explanation" name="explanation" rows="4" cols="50"></textarea>
+          </label>
+        </fieldset>
+        <input type="submit" value="Submit" id="submit">
+      </form>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+:root {
+  --text: #062727;
+  --background: #f6fefe;
+  --primary: #1a9e9e;
+  --secondary: #c2f5f5;
+  --accent: #21caca;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-family: Trebuchet MS;
+}
+main {
+  max-width: 36rem;
+  margin: 3rem auto;
+  background-color: var(--background);
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+@media screen and (max-width: 41rem) {
+  main {
+    height: ;
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 1rem 0;
+  }
+  form {
+    padding: 0 1rem;
+  }
+}
+
+label {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+fieldset {
+  border: none;
+  margin: 2rem inherit;
+  /* padding: 2rem 1rem; */
+}
+
+#title, #description {
+  text-align: center;
+}
+
+input, select, textarea {
+  padding: 0.3rem;
+  margin: 0.2rem auto;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+}
+
+input {
+  border: none;
+  border-bottom: 0.2rem solid var(--primary);
+}
+
+select {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.5rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  width: fit-content;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+input[type="submit"] {
+  width: 70%;
+  margin: 2rem auto;
+  display: block;
+  background-color: var(--accent);
+  border: 0.2rem solid var(--primary);
+}
+input[type="submit"]:hover {
+  background-color: var(--secondary);
+  border: 0.2rem solid var(--accent);
+}
+input[type="submit"]:active {
+  background-color: var(--primary);
+  border: 0.2rem solid var(--secondary);
+}
+
+** end of undefined **
+

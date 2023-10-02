@@ -1,0 +1,64 @@
+<!-- this is a submission for frontend mentor challenges -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="styles/main.css" media="screen" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:ital,wght@0,700;1,400;1,800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <title>Age calculator app</title>
+
+</head>
+<body>
+
+  <div class="main-box">
+    <form class="form-box">
+      <div class="input-grid">
+        <div class="input-content">
+          <label id="js-day-label">Day</label>
+          <input class="date-input" id="js-day-input" type="number" placeholder="DD" required>
+          <p class="error-message" id="js-day-message"></p>
+        </div>
+        <div class="input-content">
+          <label id="js-month-label">Month</label>
+          <input class="date-input" id="js-month-input" type="number" placeholder="MM" required>
+          <p class="error-message" id="js-month-message"></p>
+        </div>
+        <div class="input-content">
+          <label id="js-year-label">Year</label>
+          <input class="date-input long-input" id="js-year-input" type="number" placeholder="YYYY" required>
+          <p class="error-message" id="js-year-message"></p>
+        </div>
+      </div>
+      <button type="submit" class="submit-button" id="js-submit-button">
+        <img src="assets/images/icon-arrow.svg" alt="submit-button">
+      </button>
+    </form>
+    <div class="output">
+      <p class="result-line">
+        <span class="output" id="js-year-output">--</span> years
+      </p>
+      <p class="result-line">
+        <span class="output" id="js-month-output">--</span> months
+      </p>
+      <p class="result-line">
+        <span class="output" id="js-day-output">--</span> days
+      </p>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Europa-012">Gian Carlo Manuel</a>.
+  </div>
+  
+  <script src="scripts/main.js"></script>
+</body>
+</html>

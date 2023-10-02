@@ -1,0 +1,116 @@
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+.attribution {
+  font-size: 11px; text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(75, 75, 75, 0.2);
+  padding: 3px 0;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+  margin: 0;
+  background-color: var(--off-white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-box {
+  background-color: var(--white);
+  padding: 32px;
+  font-size: 32px;
+  font-family: 'Outfit', sans-serif;
+  border-radius: 16px 16px 64px 16px;
+  box-shadow: 0 0 16px hsl(0, 0%, 86%);
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 12px;
+  border-bottom: 2px solid var(--light-grey);
+  padding-bottom: 36px;
+}
+
+.input-content label,
+.error-message {
+  display: block;
+  color: var(--smokey-grey);
+  font-size: 18px;
+  margin: 8px 0;
+  font-weight: 700;
+}
+
+.error-message {
+  color: var(--light-red);
+}
+
+.date-input {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  padding: 16px 24px;
+  font-size: 32px;
+  width: 96px;
+  border-radius: 8px;
+  border: 2px solid var(--light-grey);
+  outline: none;
+  transition: 0.25s;
+}
+.long-input {
+  width: 128px;
+}
+.date-input:focus {
+  border-color: var(--purple);
+}
+
+/* removing spin arrow buttons in number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-box {
+  position: relative;
+}
+
+.submit-button {
+  background-color: var(--purple);
+  border-radius: 100px;
+  padding: 20px;
+  position: absolute;
+  transform: translate(0, -50%);
+  right: 0;
+  border: none;
+  transition: 0.25s;
+}
+.submit-button:hover {
+  background-color: var(--off-black);
+}
+
+.output {
+  margin-top: 20px;
+}
+.result-line {
+  color: var(--off-black);
+  font-weight: 800;
+  font-size: 86px;
+  font-style: italic;
+  margin: 0;
+}
+.result-line span {
+  color: var(--purple);
+}
