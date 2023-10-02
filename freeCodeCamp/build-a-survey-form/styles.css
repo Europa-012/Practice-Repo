@@ -1,0 +1,101 @@
+:root {
+  --text: #062727;
+  --background: #f6fefe;
+  --primary: #1a9e9e;
+  --secondary: #c2f5f5;
+  --accent: #21caca;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: var(--secondary);
+  color: var(--text);
+  font-family: Trebuchet MS;
+}
+main {
+  max-width: 36rem;
+  margin: 3rem auto;
+  background-color: var(--background);
+  padding: 2rem;
+  border-radius: 3rem;
+}
+
+@media screen and (max-width: 41rem) {
+  main {
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    border-radius: 0;
+    margin: 0;
+    padding: 1rem 0;
+  }
+  form {
+    padding: 0 1rem;
+  }
+}
+
+label {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+fieldset {
+  border: none;
+  margin: 2rem inherit;
+  /* padding: 2rem 1rem; */
+}
+
+#title, #description {
+  text-align: center;
+}
+
+input, select, textarea {
+  padding: 0.3rem;
+  margin: 0.2rem auto;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+}
+
+input {
+  border: none;
+  border-bottom: 0.2rem solid var(--primary);
+}
+
+select {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 0.5rem;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  display: inline-block;
+  width: fit-content;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+input[type="submit"] {
+  width: 70%;
+  margin: 2rem auto;
+  display: block;
+  background-color: var(--accent);
+  border: 0.2rem solid var(--primary);
+}
+input[type="submit"]:hover {
+  background-color: var(--secondary);
+  border: 0.2rem solid var(--accent);
+}
+input[type="submit"]:active {
+  background-color: var(--primary);
+  border: 0.2rem solid var(--secondary);
+}
